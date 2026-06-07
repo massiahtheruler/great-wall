@@ -446,22 +446,85 @@ export function EstimateModal({
 }
 
 function Footer({ onEstimate }: { onEstimate: () => void }) {
+  const scrollHome = () => {
+    if (typeof window !== "undefined") {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  };
+
   return (
     <footer className="site-footer">
-      <div>
+      <button type="button" className="footer-crest" onClick={scrollHome} aria-label="Scroll to top">
+        <span className="footer-crest__arrow" aria-hidden="true" />
         <Image
           src="/great-wall/brand/monogram.png"
           alt=""
-          width={72}
-          height={48}
-          style={{ width: "4.5rem", height: "auto" }}
+          width={108}
+          height={72}
+          style={{ width: "6.75rem", height: "auto" }}
         />
+      </button>
+      <div className="site-footer__content">
         <p>Great Wall of Legends is a Litty-family showroom brand for fire-led rooms, crafted walls, and gathering spaces that feel built to last.</p>
+        <nav className="footer-links" aria-label="Footer links">
+          <button type="button" className="footer-link" onClick={scrollHome}>
+            <FooterIcon kind="home" />
+            Home
+          </button>
+          <button type="button" className="footer-link">
+            <FooterIcon kind="instagram" />
+            Instagram
+          </button>
+          <button type="button" className="footer-link">
+            <FooterIcon kind="facebook" />
+            Facebook
+          </button>
+          <button type="button" className="footer-link">
+            <FooterIcon kind="contact" />
+            Contact
+          </button>
+        </nav>
       </div>
       <button className="stone-button" onClick={onEstimate}>
         Start Estimate
       </button>
     </footer>
+  );
+}
+
+function FooterIcon({ kind }: { kind: "home" | "instagram" | "facebook" | "contact" }) {
+  if (kind === "home") {
+    return (
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M4 11.4 12 5l8 6.4" />
+        <path d="M6.5 10.8V19h11v-8.2" />
+      </svg>
+    );
+  }
+
+  if (kind === "instagram") {
+    return (
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <rect x="4.5" y="4.5" width="15" height="15" rx="4.2" />
+        <circle cx="12" cy="12" r="3.5" />
+        <circle cx="17.2" cy="6.8" r="0.9" fill="currentColor" stroke="none" />
+      </svg>
+    );
+  }
+
+  if (kind === "facebook") {
+    return (
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M13.6 19v-6h2.5l.4-2.7h-2.9V8.6c0-.8.3-1.4 1.5-1.4H16V4.8c-.4-.1-1-.2-1.9-.2-2 0-3.4 1.2-3.4 3.6v2.1H8.5V13h2.2v6" />
+      </svg>
+    );
+  }
+
+  return (
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M4.5 7.5h15v9h-15z" />
+      <path d="m5.2 8.1 6.8 5.1 6.8-5.1" />
+    </svg>
   );
 }
 

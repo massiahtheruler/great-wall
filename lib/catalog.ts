@@ -230,13 +230,28 @@ export const discoveryItems: GalleryItem[] = [
     status: "future",
     label: "Future category",
     price: "Quote when available",
-    image: "/great-wall/future/family-firepit.png",
+    image: "/great-wall/editorial/showroom-portrait.jpeg",
     summary: "Outdoor fire features for the same idea: a place people naturally gather around.",
     description:
       "The outdoor lane is early, but the feeling matters now. Firepits and exterior flame features extend Great Wall from the living room into the family yard.",
     included: ["Future outdoor consultation", "Material direction", "Gathering-space planning"],
     addOns: ["Stone firepit", "Outdoor seating plan", "Patio centerpiece", "Seasonal styling"],
     pairings: ["Family events", "Patio furniture", "Warm exterior lighting"],
+  },
+  {
+    slug: "custom-commissions",
+    title: "Custom Commissions",
+    category: "centerpieces",
+    status: "custom",
+    label: "Handcrafted lane",
+    price: "Quote by commission",
+    image: "/great-wall/future/family-firepit.png",
+    summary: "One-off fireplace displays, branded room moments, and custom centerpiece ideas shaped around the client.",
+    description:
+      "Custom commissions are the discovery lane for clients who want something less catalog and more signature: a room anchor, display wall, or gathering feature designed around their space.",
+    included: ["Creative direction", "Material planning", "Quote by scope", "Install path review"],
+    addOns: ["Brand mark integration", "Stone finish study", "Lighting direction", "Social reveal planning"],
+    pairings: ["Showroom displays", "Litty-family branding", "Premium material samples"],
   },
 ];
 
