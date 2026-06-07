@@ -1,65 +1,161 @@
 import Image from "next/image";
+import Link from "next/link";
+import { ProductGallery } from "@/components/GreatWallExperience";
+import RevealSection from "@/components/RevealSection";
+import { featuredItems, optionCategories } from "@/lib/catalog";
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+    <main>
+      <section className="hero">
+        <div className="hero__spotlight" />
+        <div className="hero__copy">
+          <Image
+            src="/great-wall/brand/monogram.png"
+            alt=""
+            width={98}
+            height={65}
+            className="hero__mark"
+            style={{ width: "5.4rem", height: "auto" }}
+            priority
+          />
+          <h1>Rooms built around the fire.</h1>
+          <div className="hero__actions">
+            <a href="#estimate" className="stone-button">
+              Start an Estimate
+            </a>
+            <Link href="/featured" className="ghost-button">
+              View Featured Models
+            </Link>
+          </div>
+          <p>
+            Great Wall of Legends creates media walls, fireplaces, centerpieces,
+            and custom gathering spaces with the kind of warmth that makes a
+            house feel settled.
           </p>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+        <div className="hero__image">
+          <Image
+            src="/great-wall/editorial/showroom-row.png"
+            alt="A Great Wall showroom row of fireplace wall options"
+            fill
+            sizes="(min-width: 900px) 58vw, 100vw"
+            priority
+          />
         </div>
-      </main>
-    </div>
+      </section>
+
+      <RevealSection className="section-shell featured-preview">
+        <div className="section-heading">
+          <p className="fine-label">Featured standard models</p>
+          <h2>Clear starting points, custom-finished around your room.</h2>
+          <p>
+            These models give the quote conversation a real foundation. Choose a
+            direction, add the details that matter, and send the idea list.
+          </p>
+        </div>
+        <ProductGallery items={featuredItems.slice(0, 4)} />
+      </RevealSection>
+
+      <RevealSection className="section-shell discovery-band" delay={120}>
+        <div className="discovery-band__media">
+          <Image
+            src="/great-wall/editorial/showroom-portrait.jpeg"
+            alt="Great Wall showroom fireplace installation"
+            fill
+            sizes="(min-width: 900px) 42vw, 100vw"
+          />
+        </div>
+        <div className="discovery-band__copy">
+          <p className="fine-label">Discovery</p>
+          <h2>Not everything should be sold like a shelf item.</h2>
+          <p>
+            Some walls need a measured quote. Some pieces need material samples.
+            Some rooms just need a grown conversation about how people gather
+            there. That is where the custom lane lives.
+          </p>
+          <Link href="/discover" className="stone-button">
+            Explore Custom Direction
+          </Link>
+        </div>
+      </RevealSection>
+
+      <RevealSection className="section-shell options-preview" delay={140}>
+        <div className="section-heading section-heading--wide">
+          <p className="fine-label">More than media walls</p>
+          <h2>Leave room for every fire-led centerpiece this brand can become.</h2>
+        </div>
+        <div className="option-grid">
+          {optionCategories.map((option) => (
+            <article
+              key={option.title}
+              className={`option-tile ${option.status === "soon" ? "option-tile--soon" : "option-tile--active"}`}
+            >
+              <div className="option-tile__media">
+                <Image src={option.image} alt={option.title} fill sizes="33vw" />
+              </div>
+              <p className="fine-label">{option.availability}</p>
+              <h3>{option.title}</h3>
+              <p>{option.summary}</p>
+              {option.status === "soon" ? (
+                <span className="soon-chip">Feature soon available</span>
+              ) : (
+                <a href="#estimate" className="text-link">
+                  Request direction
+                </a>
+              )}
+            </article>
+          ))}
+        </div>
+      </RevealSection>
+
+      <RevealSection className="section-shell network-section" delay={160}>
+        <div className="network-section__copy">
+          <p className="fine-label">Installer network</p>
+          <h2>Best in show is not just a trophy. It is proof of craft.</h2>
+          <p>
+            As the team grows, Great Wall can route client work to trusted
+            contractors and spotlight the best installs through Litty-powered
+            social contests, reveal reels, and monthly recognition.
+          </p>
+        </div>
+        <div className="network-card">
+          <Image
+            src="/great-wall/editorial/award-materials.png"
+            alt="Trophy and stone material samples for contractor contest"
+            fill
+            sizes="(min-width: 900px) 40vw, 100vw"
+          />
+        </div>
+        <div className="network-card network-card--phone">
+          <Image
+            src="/great-wall/editorial/litty-social-phone.png"
+            alt="Litty social phone mockup"
+            fill
+            sizes="380px"
+          />
+        </div>
+      </RevealSection>
+
+      <RevealSection className="section-shell final-cta" delay={180}>
+        <Image
+          src="/great-wall/brand/litty-script-mark.png"
+          alt=""
+          width={180}
+          height={101}
+          style={{ width: "11.25rem", height: "auto" }}
+        />
+        <h2>A Litty-family brand with its own front door.</h2>
+        <p>
+          Great Wall carries the family monogram quietly, then lets stone, fire,
+          and craft do the talking.
+        </p>
+        <a href="#estimate" className="stone-button">
+          Start an Estimate
+        </a>
+      </RevealSection>
+
+      <div id="estimate" className="anchor-target" />
+    </main>
   );
 }
