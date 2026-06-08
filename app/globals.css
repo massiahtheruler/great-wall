@@ -171,6 +171,7 @@ button {
 
 .desktop-nav {
   display: flex;
+  min-width: 0;
   justify-content: center;
   gap: 0.45rem;
 }
@@ -1371,10 +1372,23 @@ textarea {
 @media (max-width: 980px) {
   .site-header {
     grid-template-columns: 1fr auto;
+    align-items: stretch;
   }
 
   .desktop-nav {
+    grid-column: 1 / -1;
+    justify-content: flex-start;
+    overflow-x: auto;
+    padding-bottom: 0.1rem;
+    scrollbar-width: none;
+  }
+
+  .desktop-nav::-webkit-scrollbar {
     display: none;
+  }
+
+  .nav-link {
+    flex: 0 0 auto;
   }
 
   .hero,
@@ -1423,8 +1437,13 @@ textarea {
 
 @media (max-width: 640px) {
   .site-header {
+    grid-template-columns: minmax(0, 1fr);
     width: calc(100% - 18px);
     margin-top: 9px;
+  }
+
+  .brand-lockup {
+    justify-self: center;
   }
 
   .brand-lockup strong {
