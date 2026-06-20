@@ -1,0 +1,630 @@
+{
+  "rootFolder": "/Users/christinemarquez/Desktop/great-wall",
+  "analyzedAt": "2026-06-20T18:27:06.574Z",
+  "rootStructure": [
+    {
+      "name": ".gitignore",
+      "type": "file",
+      "size": 480,
+      "lines": 42
+    },
+    {
+      "name": "AGENTS.md",
+      "type": "file",
+      "size": 327,
+      "lines": 6
+    },
+    {
+      "name": "CLAUDE.md",
+      "type": "file",
+      "size": 11,
+      "lines": 2
+    },
+    {
+      "name": "Generated image 2.png",
+      "type": "file",
+      "size": 2356509,
+      "lines": 8546
+    },
+    {
+      "name": "Generated image 3.png",
+      "type": "file",
+      "size": 2625003,
+      "lines": 7202
+    },
+    {
+      "name": "README.md",
+      "type": "file",
+      "size": 6110,
+      "lines": 119
+    },
+    {
+      "name": "app",
+      "type": "dir"
+    },
+    {
+      "name": "components",
+      "type": "dir"
+    },
+    {
+      "name": "eslint.config.mjs",
+      "type": "file",
+      "size": 465,
+      "lines": 19
+    },
+    {
+      "name": "lib",
+      "type": "dir"
+    },
+    {
+      "name": "next-env.d.ts",
+      "type": "file",
+      "size": 247,
+      "lines": 7
+    },
+    {
+      "name": "next.config.ts",
+      "type": "file",
+      "size": 146,
+      "lines": 10
+    },
+    {
+      "name": "node_modules",
+      "type": "dir"
+    },
+    {
+      "name": "package-lock.json",
+      "type": "file",
+      "size": 232759,
+      "lines": 6777
+    },
+    {
+      "name": "package.json",
+      "type": "file",
+      "size": 566,
+      "lines": 28
+    },
+    {
+      "name": "postcss.config.mjs",
+      "type": "file",
+      "size": 94,
+      "lines": 8
+    },
+    {
+      "name": "public",
+      "type": "dir"
+    },
+    {
+      "name": "test-results",
+      "type": "dir"
+    },
+    {
+      "name": "tsconfig.json",
+      "type": "file",
+      "size": 666,
+      "lines": 35
+    }
+  ],
+  "rootFileSnippets": {
+    "AGENTS.md": [
+      "<!-- BEGIN:nextjs-agent-rules -->",
+      "# This is NOT the Next.js you know",
+      "",
+      "This version has breaking changes — APIs, conventions, and file structure may all differ from your training data. Read the relevant guide in `node_modules/next/dist/docs/` before writing any code. Heed deprecation notices.",
+      "<!-- END:nextjs-agent-rules -->",
+      ""
+    ],
+    "CLAUDE.md": [
+      "@AGENTS.md",
+      ""
+    ],
+    "Generated image 2.png": [
+      "�PNG",
+      "\u001a",
+      "\u0000\u0000\u0000\rIHDR\u0000\u0000\u0003`\u0000\u0000\u0007\u001d\b\u0002\u0000\u0000\u0000�\u0003��\u0000\u0000aZcaBX\u0000\u0000aZjumb\u0000\u0000\u0000\u001ejumdc2pa\u0000\u0011\u0000\u0010�\u0000\u0000�\u00008�q\u0003c2pa\u0000\u0000\u0000a4jumb\u0000\u0000\u0000Gjumdc2ma\u0000\u0011\u0000\u0010�\u0000\u0000�\u00008�q\u0003urn:c2pa:46eeb9c1-0ca8-48a5-8e73-115e0f6c48bc\u0000\u0000\u0000\u0017�jumb\u0000\u0000\u0000)jumdc2as\u0000\u0011\u0000\u0010�\u0000\u0000�\u00008�q\u0003c2pa.assertions\u0000\u0000\u0000\t�jumb\u0000\u0000\u0000;jumd@�\f2��H��\u000b*��Ci\u0013c2pa.icon\u0000\u0000\u0000\u0000\u0018c2sh�7��F\u0015b���\u000b��\u0001�Y\u0000\u0000\u0000\u0017bfdb\u0000image/svg+xml\u0000\u0000\u0000\twbidb<svg width=\"716\" height=\"716\" viewBox=\"0 0 716 716\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">",
+      "<path d=\"M508.749 317.399C516.777 287.314 508.991 253.884 485.389 230.282C461.788 206.681 428.36 198.895 398.273 206.923C376.231 184.928 343.39 174.956 311.148 183.596C278.906 192.234 255.45 217.292 247.36 247.361C217.291 255.451 192.233 278.91 183.595 311.149C174.957 343.391 184.927 376.232 206.924 398.274C198.896 428.359 206.683 461.789 230.284 485.391C253.885 508.992 287.313 516.779 317.401 508.75C339.442 530.745 372.286 540.717 404.525 532.079C436.767 523.441 460.223 498.384 468.313 468.315C498.383 460.224 523.44 436.766 532.078 404.526C540.716 372.285 530.747 339.443 508.749 317.402V317.399ZM470.899 244.776C486.892 260.77 493.488 282.601 490.687 303.412L415.577 260.046C412.411 258.218 408.509 258.218 405.345 260.046L317.401 310.82V277.526C317.401 275.191 318.652 273.005 320.676 271.837L387.644 233.174C414.178 218.353 448.346 222.223 470.901 244.776H470.899ZM357.837 311.144L398.275 334.491V381.185L357.837 404.532L317.398 381.185V334.491L357.837 311.144ZM264.776 269.693C265.207 239.305 285.644 211.649 316.453 203.393C338.3 197.54 360.505 202.744 377.127 215.573L302.014 258.937C298.848 260.764 296.898 264.144 296.898 267.798V369.346L268.065 352.699C266.043 351.531 264.776 349.353 264.776 347.017V269.691V269.693ZM203.391 316.454C209.244 294.608 224.854 277.978 244.276 269.999V356.73C244.276 360.384 246.226 363.763 249.392 365.591L337.337 416.365L308.503 433.013C306.481 434.181 303.961 434.188 301.939 433.02L234.971 394.357C208.868 378.789 195.138 347.261 203.391 316.454ZM244.775 470.9C228.781 454.906 222.186 433.075 224.986 412.264L300.096 455.63C303.263 457.457 307.164 457.457 310.328 455.63L398.273 404.856V438.149C398.273 440.485 397.022 442.671 394.997 443.839L328.029 482.502C301.495 497.322 267.327 493.452 244.772 470.9H244.775ZM450.897 445.982C450.466 476.371 430.029 504.027 399.22 512.283C377.373 518.136 355.168 512.932 338.547 500.102L413.659 456.738C416.826 454.911 418.775 451.532 418.775 447.877V346.329L447.609 362.977C449.631 364.145 450.897 366.323 450.897 368.659V445.985V445.982ZM512.282 399.221C506.429 421.068 490.819 437.697 471.397 445.676V358.946C471.397 355.292 469.448 351.912 466.281 350.085L378.336 299.311L407.17 282.663C409.192 281.495 411.712 281.487 413.734 282.655L480.702 321.318C506.805 336.887 520.536 368.415 512.282 399.221Z\" fill=\"black\"/>",
+      "</svg>",
+      "\u0000\u0000\u0001~jumb\u0000\u0000\u0000Ajumdcbor\u0000\u0011\u0000\u0010�\u0000\u0000�\u00008�q\u0013c2pa.actions.v2\u0000\u0000\u0000\u0000\u0018c2sh?]?r��8��\u0005�-�� G\u0000\u0000\u00015cbor�gactions��factionlc2pa.createddwhen�t2026-06-07T00:00:00ZmsoftwareAgent�dnameigpt-imagegversionc2.0qdigitalSourceTypexFhttp://cv.iptc.org/newscodes/digitalsourcetype/trainedAlgorithmicMedia�factionnc2pa.converteddwhen�t2026-06-07T00:00:00Z�factionx\u0018c2pa.watermarked.unbounddwhen�t2026-06-07T00:00:00Z\u0000\u0000\u000b�jumb\u0000\u0000\u0000Ijumdcbor\u0000\u0011\u0000\u0010�\u0000\u0000�\u00008�q\u0013c2pa.certificate-status\u0000\u0000\u0000\u0000\u0018c2sh�",
+      "?7c[\u001b��\u001d���\u0019�-\u0000\u0000\u000bicbor�hocspVals�y\u0005�MIIEHwoBAKCCBBgwggQUBgkrBgEFBQcwAQEEggQFMIIEATCBoqIWBBQPNn9tJjbqcy7BQH4VDy5ZfyZUcRgPMjAyNjA2MDUxODA0MzFaMHcwdTBNMAkGBSsOAwIaBQAEFD5MfI5QC4dscxW+r26X6hDulCDJBBTDsySWNJOhWepSGGueF+CputawTAIUUpQlB4G1aob5Mxd4cNaOre9iGkGAABgPMjAyNjA2MDUxODA0MzFaoBEYDzIwMjYwNjEyMTgwNDMxWjAKBggqhkjOPQQDAgNJADBGAiEAmrqJKtC2Kj+vCzy5x9IbCidUWrzvZ145/yifhcp+1pECIQCLUnbNcScypvMTNvZ8WCkuqdctnxKeZzzeDuLC0d4ncaCCAwEwggL9MIIC+TCCAn6gAwIBAgIUXAXsZemV92wl4MQVC2X2n3h+PzswCgYIKoZIzj0EAwMwgacxCzAJBgNVBAYTAlVTMREwDwYDVQQIDAhOZXcgWW9yazERMA8GA1UEBwwITmV3IFlvcmsxEzARBgNVBAoMClRydWZvIEluYy4xFDASBgNVBAsMC0NBIERpdmlzaW9uMRowGAYJKoZIhvcNAQkBFgtjYUB0cnVmby5haTErMCkGA1UEAwwiVHJ1Zm8gQzJQQSBDbGFpbSBTaWduaW5nIENBICgyMDI1KTAeFw0yNjA2MDIwMDAzMjFaFw0yNjA3MDIwMDAzMjFaMIGlMQswCQYDVQQGEwJVUzERMA8GA1UECAwITmV3IFlvcmsxETAPBgNVBAcMCE5ldyBZb3JrMRMwEQYDVQQKDApUcnVmbyBJbmMuMRQwEgYDVQQLDAtDQSBEaXZpc2lvbjEaMBgGCSqGSIb3DQEJARYLY2FAdHJ1Zm8uYWkxKTAnBgNVBAMMIFRydWZvIEMyUEEgT0NTUCBSZXNwb25kZXIgKDIwMjUpMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEZY51Pi4wFPn1VTObiMJwoPW4ZAYzCcEclhF3AapUs1u1MyToXjriKyxaZIBEoUV3sqiBJxdEfPpzVMIQhgnkmKOBhzCBhDAdBgNVHQ4EFgQUDzZ/bSY26nMuwUB+FQ8uWX8mVHEwHwYDVR0jBBgwFoAUw7MkljSToVnqUhhrnhfgqbrWsEwwDAYDVR0TAQH/BAIwADAOBgNVHQ8BAf8EBAMCB4AwEwYDVR0lBAwwCgYIKwYBBQUHAwkwDwYJKwYBBQUHMAEFBAIFADAKBggqhkjOPQQDAwNpADBmAjEA3WCr3hRngOWBC6avpK7+su/Hlk7EpzRNgh6GXzxsZxkQgeE8nGhdwudS2FTMPTBiAjEAzKgUT5m7T5VrnNHm6AgIxW5Q0sF2IUxCw84N8inQXNC3AJIiip+XD9T9tW5ncL+Wy\u0005�MIIEVQoBAKCCBE4wggRKBgkrBgEFBQcwAQEEggQ7MIIENzCBoqIWBBTL2I42iiERcyy574oao2qevFNMQBgPMjAyNjA2MDUxODA0MzJaMHcwdTBNMAkGBSsOAwIaBQAEFIAg9bziJOltvNZvxhcpZXwkyPH9BBQD1V+vfoPlBB1ZgCdKNP9F/etJeAIUMOih8KWJQmvSuYJIR5kZ3BY3AsuAABgPMjAyNjA2MDUxODA0MzJaoBEYDzIwMjYwNjEyMTgwNDMyWjAKBggqhkjOPQQDAwNpADBmAjEAvJ6uyXd3cLY019lWzcfyVLcGtlQ8c9EVuwWBrISB1YA+1py1CQWI9R6ZjBrjqevoAjEA2W3gh1Coqa9KB4nh8qgBnxauuxJm58k7DX7XNHAfl9XcnOAw6kfkMV8HOMwQaDAcoIIDFzCCAxMwggMPMIIClaADAgECAhQD0H00km1XGXDG2BSQTHPF0+Wb4DAKBggqhkjOPQQDAzCBqDELMAkGA1UEBhMCVVMxETAPBgNVBAgMCE5ldyBZb3JrMREwDwYDVQQHDAhOZXcgWW9yazETMBEGA1UECgwKVHJ1Zm8gSW5jLjEUMBIGA1UECwwLQ0EgRGl2aXNpb24xGjAYBgkqhkiG9w0BCQEWC2NhQHRydWZvLmFpMSwwKgYDVQQDDCNUcnVmbyBDMlBBIFJvb3QgQ0EgKDIwMjUsIEVDQyBQMzg0KTAeFw0yNjA1MTEyMzQyMjVaFw0zNjA1MDgyMzQyMjVaMIGeMQswCQYDVQQGEwJVUzERMA8GA1UECAwITmV3IFlvcmsxETAPBgNVBAcMCE5ldyBZb3JrMRMwEQYDVQQKDApUcnVmbyBJbmMuMRQwEgYDVQQLDAtDQSBEaXZpc2lvbjEaMBgGCSqGSIb3DQEJARYLY2FAdHJ1Zm8uYWkxIjAgBgNVBAMMGVRydWZvIFJvb3QgT0NTUCBSZXNwb25kZXIwdjAQBgcqhkjOPQIBBgUrgQQAIgNiAARi99dsoKC14azbyIYi2clyzHuY+CyDA4a4dMDZWWi/Wlj57DFXlBHEgUFLrKJ/yVYlwyPu2lsjqbFqylZ7qltKl5PUKOt768k3ZN8/UmkYputiRzRkCZy7AiFYgie5HTmjgYcwgYQwHQYDVR0OBBYEFMvYjjaKIRFzLLnvihqjap68U0xAMB8GA1UdIwQYMBaAFAPVX69+g+UEHVmAJ0o0/0X960l4MAwGA1UdEwEB/wQCMAAwDgYDVR0PAQH/BAQDAgeAMBMGA1UdJQQMMAoGCCsGAQUFBwMJMA8GCSsGAQUFBzABBQQCBQAwCgYIKoZIzj0EAwMDaAAwZQIxAO3tH4v3y8zOE1PDevQa0MwMDxoE6cQ6VoU1miq+B4myRpleSfy1huVU1lI6xmnHfAIwFxgk2t8PxXzBlYnUtXHUyqwp4QOoiKsvN/DpQf5bfhnjEm6tsOr0Et5M9bBRI8cY\u0000\u0000\u0000�jumb\u0000\u0000\u0000@jumdcbor\u0000\u0011\u0000\u0010�\u0000\u0000�\u00008�q\u0013c2pa.hash.data\u0000\u0000\u0000\u0000\u0018c2sh4z��2\"bӕ�2",
+      "���&\u0000\u0000\u0000{cbor�jexclusions��estart\u0018!flength\u0019afdnamenjumbf manifestcalgfsha256dhashX \u0006\u000b\u0004[�)5��v���y�\u001añ�x�\u001c�Mb_�$��I\u0000cpadH\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0003\u001ajumb\u0000\u0000\u0000'jumdc2cl\u0000\u0011\u0000\u0010�\u0000\u0000�\u00008�q\u0003c2pa.claim.v2\u0000\u0000\u0000\u0002�cbor�jinstanceIDx,xmp:iid:9f5eddc8-73cf-47d9-bb45-42278ebab580tclaim_generator_info�dnamex\u0018OpenAI Media Service APIdicon�curlx$self#jumbf=c2pa.assertions/c2pa.icondhashX ĉ�Ӊ6a��-A�\u0017�{S��\u0016P�����O/�,�?kspecVersione2.2.0worg.contentauth.c2pa_rsf0.79.2isignaturexMself#jumbf=/c2pa/urn:c2pa:46eeb9c1-0ca8-48a5-8e73-115e0f6c48bc/c2pa.signaturercreated_assertions��curlx$self#jumbf=c2pa.assertions/c2pa.icondhashX ĉ�Ӊ6a��-A�\u0017�{S��\u0016P�����O/�,�?�curlx*self#jumbf=c2pa.assertions/c2pa.actions.v2dhashX �xo*)`�RW>��Th�\u0001m\u0003����ŚO�sNjP|Ȣcurlx2self#jumbf=c2pa.assertions/c2pa.certificate-statusdhashX ˡ7�7�jI�\u001c��\u000fHE/�`���\f`�\u001dri��=¥�curlx)self#jumbf=c2pa.assertions/c2pa.hash.datadhashX �JwJ�GH+�tO\u0007���\u0013��\u0003�U����O(\\\u0005�\u0019hdc:titleiimage.pngcalgfsha256\u0000\u0000E�jumb\u0000\u0000\u0000(jumdc2cs\u0000\u0011\u0000\u0010�\u0000\u0000�\u00008�q\u0003c2pa.signature\u0000\u0000\u0000E�cbor҄Y\u0007U�\u0001&\u0018!�Y\u0003r0�\u0003n0�\u0002�\u0003\u0002\u0001\u0002\u0002\u0014R�%\u0007��j��3\u0017xp֎��b\u001aA0",
+      "\u0006\b*�H�=\u0004\u0003\u00030��1\u000b0\t\u0006\u0003U\u0004\u0006\u0013\u0002US1\u00110\u000f\u0006\u0003U\u0004\b\f\bNew York1\u00110\u000f\u0006\u0003U\u0004\u0007\f\bNew York1\u00130\u0011\u0006\u0003U\u0004",
+      ""
+    ],
+    "Generated image 3.png": [
+      "�PNG",
+      "\u001a",
+      "\u0000\u0000\u0000\rIHDR\u0000\u0000\u0006\u0000\u0000\u0000\u0004\u0000\b\u0002\u0000\u0000\u0000�\u0013\u0005\u0015\u0000\u0000aZcaBX\u0000\u0000aZjumb\u0000\u0000\u0000\u001ejumdc2pa\u0000\u0011\u0000\u0010�\u0000\u0000�\u00008�q\u0003c2pa\u0000\u0000\u0000a4jumb\u0000\u0000\u0000Gjumdc2ma\u0000\u0011\u0000\u0010�\u0000\u0000�\u00008�q\u0003urn:c2pa:1415e448-726c-4b6a-99f1-487e797e5481\u0000\u0000\u0000\u0017�jumb\u0000\u0000\u0000)jumdc2as\u0000\u0011\u0000\u0010�\u0000\u0000�\u00008�q\u0003c2pa.assertions\u0000\u0000\u0000\t�jumb\u0000\u0000\u0000;jumd@�\f2��H��\u000b*��Ci\u0013c2pa.icon\u0000\u0000\u0000\u0000\u0018c2sh�]s�&y��E��\u0018���I\u0000\u0000\u0000\u0017bfdb\u0000image/svg+xml\u0000\u0000\u0000\twbidb<svg width=\"716\" height=\"716\" viewBox=\"0 0 716 716\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">",
+      "<path d=\"M508.749 317.399C516.777 287.314 508.991 253.884 485.389 230.282C461.788 206.681 428.36 198.895 398.273 206.923C376.231 184.928 343.39 174.956 311.148 183.596C278.906 192.234 255.45 217.292 247.36 247.361C217.291 255.451 192.233 278.91 183.595 311.149C174.957 343.391 184.927 376.232 206.924 398.274C198.896 428.359 206.683 461.789 230.284 485.391C253.885 508.992 287.313 516.779 317.401 508.75C339.442 530.745 372.286 540.717 404.525 532.079C436.767 523.441 460.223 498.384 468.313 468.315C498.383 460.224 523.44 436.766 532.078 404.526C540.716 372.285 530.747 339.443 508.749 317.402V317.399ZM470.899 244.776C486.892 260.77 493.488 282.601 490.687 303.412L415.577 260.046C412.411 258.218 408.509 258.218 405.345 260.046L317.401 310.82V277.526C317.401 275.191 318.652 273.005 320.676 271.837L387.644 233.174C414.178 218.353 448.346 222.223 470.901 244.776H470.899ZM357.837 311.144L398.275 334.491V381.185L357.837 404.532L317.398 381.185V334.491L357.837 311.144ZM264.776 269.693C265.207 239.305 285.644 211.649 316.453 203.393C338.3 197.54 360.505 202.744 377.127 215.573L302.014 258.937C298.848 260.764 296.898 264.144 296.898 267.798V369.346L268.065 352.699C266.043 351.531 264.776 349.353 264.776 347.017V269.691V269.693ZM203.391 316.454C209.244 294.608 224.854 277.978 244.276 269.999V356.73C244.276 360.384 246.226 363.763 249.392 365.591L337.337 416.365L308.503 433.013C306.481 434.181 303.961 434.188 301.939 433.02L234.971 394.357C208.868 378.789 195.138 347.261 203.391 316.454ZM244.775 470.9C228.781 454.906 222.186 433.075 224.986 412.264L300.096 455.63C303.263 457.457 307.164 457.457 310.328 455.63L398.273 404.856V438.149C398.273 440.485 397.022 442.671 394.997 443.839L328.029 482.502C301.495 497.322 267.327 493.452 244.772 470.9H244.775ZM450.897 445.982C450.466 476.371 430.029 504.027 399.22 512.283C377.373 518.136 355.168 512.932 338.547 500.102L413.659 456.738C416.826 454.911 418.775 451.532 418.775 447.877V346.329L447.609 362.977C449.631 364.145 450.897 366.323 450.897 368.659V445.985V445.982ZM512.282 399.221C506.429 421.068 490.819 437.697 471.397 445.676V358.946C471.397 355.292 469.448 351.912 466.281 350.085L378.336 299.311L407.17 282.663C409.192 281.495 411.712 281.487 413.734 282.655L480.702 321.318C506.805 336.887 520.536 368.415 512.282 399.221Z\" fill=\"black\"/>",
+      "</svg>",
+      "\u0000\u0000\u0001~jumb\u0000\u0000\u0000Ajumdcbor\u0000\u0011\u0000\u0010�\u0000\u0000�\u00008�q\u0013c2pa.actions.v2\u0000\u0000\u0000\u0000\u0018c2sh�Y��e�\u0006^�pzq�\u0002��\u0000\u0000\u00015cbor�gactions��factionlc2pa.createddwhen�t2026-06-07T00:00:00ZmsoftwareAgent�dnameigpt-imagegversionc2.0qdigitalSourceTypexFhttp://cv.iptc.org/newscodes/digitalsourcetype/trainedAlgorithmicMedia�factionnc2pa.converteddwhen�t2026-06-07T00:00:00Z�factionx\u0018c2pa.watermarked.unbounddwhen�t2026-06-07T00:00:00Z\u0000\u0000\u000b�jumb\u0000\u0000\u0000Ijumdcbor\u0000\u0011\u0000\u0010�\u0000\u0000�\u00008�q\u0013c2pa.certificate-status\u0000\u0000\u0000\u0000\u0018c2sh��0ul��,�_Q��n\u0001B\u0000\u0000\u000bicbor�hocspVals�y\u0005�MIIEHwoBAKCCBBgwggQUBgkrBgEFBQcwAQEEggQFMIIEATCBoqIWBBQPNn9tJjbqcy7BQH4VDy5ZfyZUcRgPMjAyNjA2MDUxODAzMDNaMHcwdTBNMAkGBSsOAwIaBQAEFD5MfI5QC4dscxW+r26X6hDulCDJBBTDsySWNJOhWepSGGueF+CputawTAIUUpQlB4G1aob5Mxd4cNaOre9iGkGAABgPMjAyNjA2MDUxODAzMDNaoBEYDzIwMjYwNjEyMTgwMzAzWjAKBggqhkjOPQQDAgNJADBGAiEAiuFG9Cc5uLzd5vgAo1WeEsDEZLm0F9gV8jAmd5KHGL4CIQCVPC7PVytrpsBkYrqoZCL62JHpRLKLSe5NzBsMDOHqQaCCAwEwggL9MIIC+TCCAn6gAwIBAgIUXAXsZemV92wl4MQVC2X2n3h+PzswCgYIKoZIzj0EAwMwgacxCzAJBgNVBAYTAlVTMREwDwYDVQQIDAhOZXcgWW9yazERMA8GA1UEBwwITmV3IFlvcmsxEzARBgNVBAoMClRydWZvIEluYy4xFDASBgNVBAsMC0NBIERpdmlzaW9uMRowGAYJKoZIhvcNAQkBFgtjYUB0cnVmby5haTErMCkGA1UEAwwiVHJ1Zm8gQzJQQSBDbGFpbSBTaWduaW5nIENBICgyMDI1KTAeFw0yNjA2MDIwMDAzMjFaFw0yNjA3MDIwMDAzMjFaMIGlMQswCQYDVQQGEwJVUzERMA8GA1UECAwITmV3IFlvcmsxETAPBgNVBAcMCE5ldyBZb3JrMRMwEQYDVQQKDApUcnVmbyBJbmMuMRQwEgYDVQQLDAtDQSBEaXZpc2lvbjEaMBgGCSqGSIb3DQEJARYLY2FAdHJ1Zm8uYWkxKTAnBgNVBAMMIFRydWZvIEMyUEEgT0NTUCBSZXNwb25kZXIgKDIwMjUpMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEZY51Pi4wFPn1VTObiMJwoPW4ZAYzCcEclhF3AapUs1u1MyToXjriKyxaZIBEoUV3sqiBJxdEfPpzVMIQhgnkmKOBhzCBhDAdBgNVHQ4EFgQUDzZ/bSY26nMuwUB+FQ8uWX8mVHEwHwYDVR0jBBgwFoAUw7MkljSToVnqUhhrnhfgqbrWsEwwDAYDVR0TAQH/BAIwADAOBgNVHQ8BAf8EBAMCB4AwEwYDVR0lBAwwCgYIKwYBBQUHAwkwDwYJKwYBBQUHMAEFBAIFADAKBggqhkjOPQQDAwNpADBmAjEA3WCr3hRngOWBC6avpK7+su/Hlk7EpzRNgh6GXzxsZxkQgeE8nGhdwudS2FTMPTBiAjEAzKgUT5m7T5VrnNHm6AgIxW5Q0sF2IUxCw84N8inQXNC3AJIiip+XD9T9tW5ncL+Wy\u0005�MIIEVQoBAKCCBE4wggRKBgkrBgEFBQcwAQEEggQ7MIIENzCBoqIWBBTL2I42iiERcyy574oao2qevFNMQBgPMjAyNjA2MDUxODAzMDRaMHcwdTBNMAkGBSsOAwIaBQAEFIAg9bziJOltvNZvxhcpZXwkyPH9BBQD1V+vfoPlBB1ZgCdKNP9F/etJeAIUMOih8KWJQmvSuYJIR5kZ3BY3AsuAABgPMjAyNjA2MDUxODAzMDRaoBEYDzIwMjYwNjEyMTgwMzA0WjAKBggqhkjOPQQDAwNpADBmAjEAjoD9+jPxpN1VX8acPONuzRi1EZ0ofLB7i9q73l1P4Aja0EiDUCMv9NYsxPY8+x1eAjEA30D/kFPcHFYUXkI/NWuaUZWKszxqgaRQUGeELcCJPJuQlQyBN2ujiDE7d1rOYw4RoIIDFzCCAxMwggMPMIIClaADAgECAhQD0H00km1XGXDG2BSQTHPF0+Wb4DAKBggqhkjOPQQDAzCBqDELMAkGA1UEBhMCVVMxETAPBgNVBAgMCE5ldyBZb3JrMREwDwYDVQQHDAhOZXcgWW9yazETMBEGA1UECgwKVHJ1Zm8gSW5jLjEUMBIGA1UECwwLQ0EgRGl2aXNpb24xGjAYBgkqhkiG9w0BCQEWC2NhQHRydWZvLmFpMSwwKgYDVQQDDCNUcnVmbyBDMlBBIFJvb3QgQ0EgKDIwMjUsIEVDQyBQMzg0KTAeFw0yNjA1MTEyMzQyMjVaFw0zNjA1MDgyMzQyMjVaMIGeMQswCQYDVQQGEwJVUzERMA8GA1UECAwITmV3IFlvcmsxETAPBgNVBAcMCE5ldyBZb3JrMRMwEQYDVQQKDApUcnVmbyBJbmMuMRQwEgYDVQQLDAtDQSBEaXZpc2lvbjEaMBgGCSqGSIb3DQEJARYLY2FAdHJ1Zm8uYWkxIjAgBgNVBAMMGVRydWZvIFJvb3QgT0NTUCBSZXNwb25kZXIwdjAQBgcqhkjOPQIBBgUrgQQAIgNiAARi99dsoKC14azbyIYi2clyzHuY+CyDA4a4dMDZWWi/Wlj57DFXlBHEgUFLrKJ/yVYlwyPu2lsjqbFqylZ7qltKl5PUKOt768k3ZN8/UmkYputiRzRkCZy7AiFYgie5HTmjgYcwgYQwHQYDVR0OBBYEFMvYjjaKIRFzLLnvihqjap68U0xAMB8GA1UdIwQYMBaAFAPVX69+g+UEHVmAJ0o0/0X960l4MAwGA1UdEwEB/wQCMAAwDgYDVR0PAQH/BAQDAgeAMBMGA1UdJQQMMAoGCCsGAQUFBwMJMA8GCSsGAQUFBzABBQQCBQAwCgYIKoZIzj0EAwMDaAAwZQIxAO3tH4v3y8zOE1PDevQa0MwMDxoE6cQ6VoU1miq+B4myRpleSfy1huVU1lI6xmnHfAIwFxgk2t8PxXzBlYnUtXHUyqwp4QOoiKsvN/DpQf5bfhnjEm6tsOr0Et5M9bBRI8cY\u0000\u0000\u0000�jumb\u0000\u0000\u0000@jumdcbor\u0000\u0011\u0000\u0010�\u0000\u0000�\u00008�q\u0013c2pa.hash.data\u0000\u0000\u0000\u0000\u0018c2sh\u0001��ѥ}\rx�_x\r\u0002�\u001d\u0000\u0000\u0000{cbor�jexclusions��estart\u0018!flength\u0019afdnamenjumbf manifestcalgfsha256dhashX \u00102D�'���1r\u0001�\u001a����)�\u001b�����?M0�\u001e\u0000cpadH\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0003\u001ajumb\u0000\u0000\u0000'jumdc2cl\u0000\u0011\u0000\u0010�\u0000\u0000�\u00008�q\u0003c2pa.claim.v2\u0000\u0000\u0000\u0002�cbor�jinstanceIDx,xmp:iid:f9c10878-30cb-4876-a188-9ee7283eff8ctclaim_generator_info�dnamex\u0018OpenAI Media Service APIdicon�curlx$self#jumbf=c2pa.assertions/c2pa.icondhashX rٜA �|o�lH���r��N�nM�H\u0017h��&П�(kspecVersione2.2.0worg.contentauth.c2pa_rsf0.79.2isignaturexMself#jumbf=/c2pa/urn:c2pa:1415e448-726c-4b6a-99f1-487e797e5481/c2pa.signaturercreated_assertions��curlx$self#jumbf=c2pa.assertions/c2pa.icondhashX rٜA �|o�lH���r��N�nM�H\u0017h��&П�(�curlx*self#jumbf=c2pa.assertions/c2pa.actions.v2dhashX 9��-�B:�!��J�9\u000e\u0014��y|&��aK~�8\u0017��עcurlx2self#jumbf=c2pa.assertions/c2pa.certificate-statusdhashX ����Ja撮\u0018�d\u0000��L�\u0018�<qK\u0005Aj蝗��Ѣcurlx)self#jumbf=c2pa.assertions/c2pa.hash.datadhashX ?�5����^z\\��\u000e\u0003sg�=Y�z=\f�*�su�_�)hdc:titleiimage.pngcalgfsha256\u0000\u0000E�jumb\u0000\u0000\u0000(jumdc2cs\u0000\u0011\u0000\u0010�\u0000\u0000�\u00008�q\u0003c2pa.signature\u0000\u0000\u0000E�cbor҄Y\u0007U�\u0001&\u0018!�Y\u0003r0�\u0003n0�\u0002�\u0003\u0002\u0001\u0002\u0002\u0014R�%\u0007��j��3\u0017xp֎��b\u001aA0",
+      "\u0006\b*�H�=\u0004\u0003\u00030��1\u000b0\t\u0006\u0003U\u0004\u0006\u0013\u0002US1\u00110\u000f\u0006\u0003U\u0004\b\f\bNew York1\u00110\u000f\u0006\u0003U\u0004\u0007\f\bNew York1\u00130\u0011\u0006\u0003U\u0004",
+      "",
+      "Trufo Inc.1\u00140\u0012\u0006\u0003U\u0004\u000b\f\u000bCA Division1\u001a0\u0018\u0006\t*�H��\r\u0001\t\u0001\u0016\u000bca@trufo.ai1+0)\u0006\u0003U\u0004\u0003\f\"Trufo C2PA Claim Signing CA (2025)0\u001e\u0017\r260323025302Z\u0017\r270324025302Z0G1\u000b0\t\u0006\u0003U\u0004\u0006\u0013\u0002US1\u00190\u0017\u0006\u0003U\u0004",
+      "\u0010OpenAI OpCo, LLC1\u001d0\u001b\u0006\u0003U\u0004\u0003\f\u0014OpenAI Media Service0Y0\u0013\u0006\u0007*�H�=\u0002\u0001\u0006\b*�H�=\u0003\u0001\u0007\u0003B\u0000\u0004J�D�\u0005���O?�l\u0019�n��!�y��L�)\u0015p�\u001b�gt\u0001�s�&�/~ൠq�\u0011c3N'Va�i|�8�K�*o��\u0001Z0�\u0001V0\u001f\u0006\u0003U\u001d#\u0004\u00180\u0016�\u0014ó$�4��Y�R\u0018k�\u0017੺ְL0\u001d\u0006\u0003U\u001d\u000e\u0004\u0016\u0004\u0014"
+    ],
+    "README.md": [
+      "# Great Wall of Legends",
+      "",
+      "Great Wall of Legends is a luxury showroom style web experience I built as a real client needed project for a Litty sub company focused on media walls, fireplaces, custom centerpieces, and gathering spaces that feel warm, architectural, and expensive without feeling fake.",
+      "",
+      "This was not just a homepage exercise to me. The brand actually needed its own front door and its own identity while still living inside the larger Litty family. I wanted the site to feel like it had a real product system, a real brand lane, and a real way for somebody to move from browsing into starting a quote. The goal was to make the project feel like a serious business presentation, not a pretty mockup with nowhere to go.",
+      "",
+      "## Live Site Feel",
+      "",
+      "The whole project is built around one idea. A fireplace wall is not just a product. It is a room anchor. So the site had to sell that feeling through layout, motion, language, and structure.",
+      ""
+    ],
+    "eslint.config.mjs": [
+      "import { defineConfig, globalIgnores } from \"eslint/config\";",
+      "import nextVitals from \"eslint-config-next/core-web-vitals\";",
+      "import nextTs from \"eslint-config-next/typescript\";",
+      "",
+      "const eslintConfig = defineConfig([",
+      "...nextVitals,",
+      "...nextTs,",
+      "// Override default ignores of eslint-config-next.",
+      "globalIgnores([",
+      "// Default ignores of eslint-config-next:"
+    ],
+    "next-env.d.ts": [
+      "/// <reference types=\"next\" />",
+      "/// <reference types=\"next/image-types/global\" />",
+      "import \"./.next/types/routes.d.ts\";",
+      "",
+      "// NOTE: This file should not be edited",
+      "// see https://nextjs.org/docs/app/api-reference/config/typescript for more information.",
+      ""
+    ],
+    "next.config.ts": [
+      "import type { NextConfig } from \"next\";",
+      "",
+      "const nextConfig: NextConfig = {",
+      "turbopack: {",
+      "root: __dirname,",
+      "},",
+      "};",
+      "",
+      "export default nextConfig;",
+      ""
+    ],
+    "package-lock.json": [
+      "{",
+      "\"name\": \"great-wall\",",
+      "\"version\": \"0.1.0\",",
+      "\"lockfileVersion\": 3,",
+      "\"requires\": true,",
+      "\"packages\": {",
+      "\"\": {",
+      "\"name\": \"great-wall\",",
+      "\"version\": \"0.1.0\",",
+      "\"dependencies\": {"
+    ],
+    "package.json": [
+      "{",
+      "\"name\": \"great-wall\",",
+      "\"version\": \"0.1.0\",",
+      "\"private\": true,",
+      "\"scripts\": {",
+      "\"dev\": \"next dev\",",
+      "\"build\": \"next build\",",
+      "\"start\": \"next start\",",
+      "\"lint\": \"eslint\"",
+      "},"
+    ],
+    "postcss.config.mjs": [
+      "const config = {",
+      "plugins: {",
+      "\"@tailwindcss/postcss\": {},",
+      "},",
+      "};",
+      "",
+      "export default config;",
+      ""
+    ],
+    "tsconfig.json": [
+      "{",
+      "\"compilerOptions\": {",
+      "\"target\": \"ES2017\",",
+      "\"lib\": [\"dom\", \"dom.iterable\", \"esnext\"],",
+      "\"allowJs\": true,",
+      "\"skipLibCheck\": true,",
+      "\"strict\": true,",
+      "\"noEmit\": true,",
+      "\"esModuleInterop\": true,",
+      "\"module\": \"esnext\","
+    ]
+  },
+  "importantFolders": [
+    {
+      "path": "app",
+      "category": "frontend",
+      "fileCount": 8,
+      "primaryLanguage": "TypeScript"
+    },
+    {
+      "path": "components",
+      "category": "frontend",
+      "fileCount": 2,
+      "primaryLanguage": "TypeScript"
+    },
+    {
+      "path": "lib",
+      "category": "core",
+      "fileCount": 1,
+      "primaryLanguage": "TypeScript"
+    },
+    {
+      "path": "public",
+      "category": "assets",
+      "fileCount": 31
+    },
+    {
+      "path": "test-results",
+      "category": "tests",
+      "fileCount": 1
+    }
+  ],
+  "readmeParagraphs": {
+    "root": "# Great Wall of Legends"
+  },
+  "totals": {
+    "numFiles": 57,
+    "numDirs": 17,
+    "totalSizeBytes": 23216802,
+    "totalLinesOfCode": 1310
+  },
+  "fileCategories": {
+    "other": 39,
+    "documentation": 3,
+    "source": 11,
+    "config": 4
+  },
+  "linesOfCodePerLanguage": {
+    "TypeScript": 1310
+  },
+  "filesPerLanguage": {
+    "TypeScript": 11
+  },
+  "projectTypes": [
+    "JavaScript/Node.js"
+  ],
+  "frameworks": [
+    "React",
+    "Next.js"
+  ],
+  "entryPoints": [],
+  "ciCdTools": [],
+  "packageManagers": [
+    "npm/yarn"
+  ],
+  "topLevelDirectories": [
+    {
+      "name": "components",
+      "numFiles": 2,
+      "totalLoc": 584,
+      "dominantLanguage": "TypeScript"
+    },
+    {
+      "name": "app",
+      "numFiles": 8,
+      "totalLoc": 391,
+      "dominantLanguage": "TypeScript"
+    },
+    {
+      "name": "lib",
+      "numFiles": 1,
+      "totalLoc": 318,
+      "dominantLanguage": "TypeScript"
+    },
+    {
+      "name": "public",
+      "numFiles": 31,
+      "totalLoc": 0
+    },
+    {
+      "name": "test-results",
+      "numFiles": 1,
+      "totalLoc": 0
+    }
+  ],
+  "detailedDirectories": [
+    {
+      "path": "components",
+      "name": "components",
+      "level": 1,
+      "numFiles": 2,
+      "totalLoc": 584,
+      "dominantLanguage": "TypeScript",
+      "category": "General",
+      "description": "General module with 2 files (TypeScript)",
+      "subdirectories": []
+    },
+    {
+      "path": "app",
+      "name": "app",
+      "level": 1,
+      "numFiles": 8,
+      "totalLoc": 391,
+      "dominantLanguage": "TypeScript",
+      "category": "Application",
+      "description": "Application module with 8 files (TypeScript)",
+      "subdirectories": [
+        {
+          "path": "app/featured",
+          "name": "featured",
+          "level": 2,
+          "numFiles": 2,
+          "totalLoc": 113,
+          "dominantLanguage": "TypeScript",
+          "category": "General",
+          "description": "General module with 2 files (TypeScript)",
+          "subdirectories": [
+            {
+              "path": "app/featured/[slug]",
+              "name": "[slug]",
+              "level": 3,
+              "numFiles": 1,
+              "totalLoc": 91,
+              "dominantLanguage": "TypeScript",
+              "category": "General",
+              "description": "General module with 1 files (TypeScript)",
+              "subdirectories": []
+            }
+          ]
+        },
+        {
+          "path": "app/options",
+          "name": "options",
+          "level": 2,
+          "numFiles": 1,
+          "totalLoc": 46,
+          "dominantLanguage": "TypeScript",
+          "category": "General",
+          "description": "General module with 1 files (TypeScript)",
+          "subdirectories": []
+        },
+        {
+          "path": "app/discover",
+          "name": "discover",
+          "level": 2,
+          "numFiles": 1,
+          "totalLoc": 34,
+          "dominantLanguage": "TypeScript",
+          "category": "General",
+          "description": "General module with 1 files (TypeScript)",
+          "subdirectories": []
+        }
+      ]
+    },
+    {
+      "path": "lib",
+      "name": "lib",
+      "level": 1,
+      "numFiles": 1,
+      "totalLoc": 318,
+      "dominantLanguage": "TypeScript",
+      "category": "Library",
+      "description": "Library module with 1 files (TypeScript)",
+      "subdirectories": []
+    },
+    {
+      "path": "public",
+      "name": "public",
+      "level": 1,
+      "numFiles": 31,
+      "totalLoc": 0,
+      "category": "General",
+      "description": "General module with 31 files",
+      "subdirectories": [
+        {
+          "path": "public/great-wall",
+          "name": "great-wall",
+          "level": 2,
+          "numFiles": 26,
+          "totalLoc": 0,
+          "category": "General",
+          "description": "General module with 26 files",
+          "subdirectories": [
+            {
+              "path": "public/great-wall/models",
+              "name": "models",
+              "level": 3,
+              "numFiles": 16,
+              "totalLoc": 0,
+              "category": "Models/Entities",
+              "description": "Models/Entities module with 16 files",
+              "subdirectories": []
+            },
+            {
+              "path": "public/great-wall/editorial",
+              "name": "editorial",
+              "level": 3,
+              "numFiles": 5,
+              "totalLoc": 0,
+              "category": "General",
+              "description": "General module with 5 files",
+              "subdirectories": []
+            },
+            {
+              "path": "public/great-wall/brand",
+              "name": "brand",
+              "level": 3,
+              "numFiles": 3,
+              "totalLoc": 0,
+              "category": "General",
+              "description": "General module with 3 files",
+              "subdirectories": []
+            },
+            {
+              "path": "public/great-wall/future",
+              "name": "future",
+              "level": 3,
+              "numFiles": 2,
+              "totalLoc": 0,
+              "category": "General",
+              "description": "General module with 2 files",
+              "subdirectories": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "test-results",
+      "name": "test-results",
+      "level": 1,
+      "numFiles": 1,
+      "totalLoc": 0,
+      "category": "Testing",
+      "description": "Testing module with 1 files",
+      "subdirectories": []
+    }
+  ],
+  "architecturalInsights": {
+    "coreApplications": [
+      {
+        "path": "app",
+        "name": "app",
+        "level": 1,
+        "numFiles": 8,
+        "totalLoc": 391,
+        "dominantLanguage": "TypeScript",
+        "category": "Application",
+        "description": "Application module with 8 files (TypeScript)",
+        "subdirectories": [
+          {
+            "path": "app/featured",
+            "name": "featured",
+            "level": 2,
+            "numFiles": 2,
+            "totalLoc": 113,
+            "dominantLanguage": "TypeScript",
+            "category": "General",
+            "description": "General module with 2 files (TypeScript)",
+            "subdirectories": [
+              {
+                "path": "app/featured/[slug]",
+                "name": "[slug]",
+                "level": 3,
+                "numFiles": 1,
+                "totalLoc": 91,
+                "dominantLanguage": "TypeScript",
+                "category": "General",
+                "description": "General module with 1 files (TypeScript)",
+                "subdirectories": []
+              }
+            ]
+          },
+          {
+            "path": "app/options",
+            "name": "options",
+            "level": 2,
+            "numFiles": 1,
+            "totalLoc": 46,
+            "dominantLanguage": "TypeScript",
+            "category": "General",
+            "description": "General module with 1 files (TypeScript)",
+            "subdirectories": []
+          },
+          {
+            "path": "app/discover",
+            "name": "discover",
+            "level": 2,
+            "numFiles": 1,
+            "totalLoc": 34,
+            "dominantLanguage": "TypeScript",
+            "category": "General",
+            "description": "General module with 1 files (TypeScript)",
+            "subdirectories": []
+          }
+        ]
+      }
+    ],
+    "entryPointDetails": [],
+    "serviceArchitecture": {
+      "microservices": [],
+      "monoliths": [],
+      "libraries": [
+        "lib"
+      ]
+    },
+    "layeredArchitecture": {
+      "presentation": [],
+      "business": [],
+      "data": [],
+      "infrastructure": []
+    }
+  },
+  "largeFiles": [
+    {
+      "path": "public/great-wall/editorial/showroom-portrait.jpeg",
+      "sizeMb": 2.69
+    },
+    {
+      "path": "public/great-wall/editorial/showroom-row.png",
+      "sizeMb": 2.63
+    },
+    {
+      "path": "Generated image 3.png",
+      "sizeMb": 2.5
+    },
+    {
+      "path": "Generated image 2.png",
+      "sizeMb": 2.25
+    },
+    {
+      "path": "public/great-wall/editorial/award-materials.png",
+      "sizeMb": 2.16
+    },
+    {
+      "path": "public/great-wall/editorial/installer-boots.png",
+      "sizeMb": 1.88
+    },
+    {
+      "path": "public/great-wall/models/bp7-main.png",
+      "sizeMb": 1.65
+    },
+    {
+      "path": "public/great-wall/models/bp3-beadboard.png",
+      "sizeMb": 1.53
+    },
+    {
+      "path": "public/great-wall/models/bp1-mantel.png",
+      "sizeMb": 1.39
+    }
+  ],
+  "dependencies": {
+    "production": [
+      "@emailjs/browser",
+      "next",
+      "react",
+      "react-dom"
+    ],
+    "development": [
+      "@tailwindcss/postcss",
+      "@types/node",
+      "@types/react",
+      "@types/react-dom",
+      "eslint",
+      "eslint-config-next",
+      "tailwindcss",
+      "typescript"
+    ],
+    "total": 12
+  },
+  "complexity": {
+    "averageFileSize": 22.982456140350877,
+    "maxFileSize": 28206.6944,
+    "nestedDepth": 0,
+    "estimatedComplexity": "low"
+  },
+  "gitRepo": {
+    "firstCommitDate": "2026-06-07",
+    "totalCommits": 6,
+    "numContributors": 0,
+    "currentBranch": "main",
+    "remoteUrls": [
+      "https://github.com/massiahtheruler/great-wall.git"
+    ]
+  }
+}
