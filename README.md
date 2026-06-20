@@ -10,6 +10,20 @@ Live Demo
 
 [Live Demo: great-wall-omega.vercel.app](https://great-wall-omega.vercel.app/)
 
+Project Preview
+
+The screenshots below show the main client-facing flow: the branded first impression, product browsing, detail exploration, and the quote request experience that turns the site from a static showcase into a usable lead generation tool.
+
+![Great Wall hero section](docs/screenshots/great-wall-hero.png)
+
+![Featured product catalog](docs/screenshots/great-wall-featured.png)
+
+![Product detail page](docs/screenshots/great-wall-product.png)
+
+![Product quick-view modal](docs/screenshots/great-wall-product-modal.png)
+
+![Estimate request modal](docs/screenshots/great-wall-contact-modal.png)
+
 ⸻
 
 Key Features
