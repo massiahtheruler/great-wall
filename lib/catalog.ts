@@ -36,6 +36,7 @@ export interface OptionCategory {
 
 export const navItems = [
   { label: "Featured", href: "/featured" },
+  { label: "Builder", href: "/builder" },
   { label: "Discover", href: "/discover" },
   { label: "Options", href: "/options" },
   { label: "Estimate", href: "#estimate" },
