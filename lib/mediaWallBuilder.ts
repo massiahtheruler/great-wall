@@ -29,6 +29,20 @@ export interface BuilderOption {
   defaultSelected?: boolean;
 }
 
+export type BuilderEstimateLine = {
+  label: string;
+  amount: number;
+  kind: "base" | "upgrade" | "total";
+};
+
+export type BuilderProofProject = {
+  title: string;
+  eyebrow: string;
+  image: string;
+  alt: string;
+  description: string;
+};
+
 export const builderModels: BuilderModel[] = [
   {
     id: "bp1",
@@ -110,6 +124,47 @@ export const builderOptions: BuilderOption[] = [
   },
 ];
 
+const builderProofProjects: Record<"basic" | "mantel" | "shelves", BuilderProofProject> = {
+  basic: {
+    title: "Stone fireplace wall",
+    eyebrow: "Selected proof",
+    image: "/great-wall/models/bp2-main.jpg",
+    alt: "Completed stone media wall with fireplace and TV recess",
+    description:
+      "A clean stone-forward wall that shows the base fireplace direction without extra shelving.",
+  },
+  mantel: {
+    title: "Mantel feature wall",
+    eyebrow: "Mantel selected",
+    image: "/great-wall/models/bp1-mantel.png",
+    alt: "Completed media wall with mantel and fireplace detail",
+    description:
+      "A warmer mantel profile that gives the wall a stronger shelf line and finished family-room feel.",
+  },
+  shelves: {
+    title: "Built-in shelving layout",
+    eyebrow: "Shelving selected",
+    image: "/great-wall/models/bp4-s2.jpg",
+    alt: "Completed media wall with side shelves and a fireplace",
+    description:
+      "A shelf-ready install with more display space. Shelving takes priority when multiple layout upgrades are selected.",
+  },
+};
+
+export function getBuilderProofProject(
+  selectedOptionIds: BuilderOptionId[],
+): BuilderProofProject {
+  if (selectedOptionIds.includes("sideShelves")) {
+    return builderProofProjects.shelves;
+  }
+
+  if (selectedOptionIds.includes("mantel")) {
+    return builderProofProjects.mantel;
+  }
+
+  return builderProofProjects.basic;
+}
+
 export function calculateBuilderTotal(
   model: BuilderModel,
   selectedOptionIds: BuilderOptionId[],
@@ -118,6 +173,34 @@ export function calculateBuilderTotal(
     const option = builderOptions.find((entry) => entry.id === optionId);
     return total + (option?.price ?? 0);
   }, model.basePrice);
+}
+
+export function buildBuilderEstimateLines(
+  model: BuilderModel,
+  selectedOptionIds: BuilderOptionId[],
+): BuilderEstimateLine[] {
+  const selectedOptions = builderOptions.filter((option) =>
+    selectedOptionIds.includes(option.id),
+  );
+  const total = calculateBuilderTotal(model, selectedOptionIds);
+
+  return [
+    {
+      label: `${model.name} base wall`,
+      amount: model.basePrice,
+      kind: "base",
+    },
+    ...selectedOptions.map((option) => ({
+      label: option.label,
+      amount: option.price,
+      kind: "upgrade" as const,
+    })),
+    {
+      label: "Estimated starting price",
+      amount: total,
+      kind: "total",
+    },
+  ];
 }
 
 export function formatEstimatePrice(amount: number) {

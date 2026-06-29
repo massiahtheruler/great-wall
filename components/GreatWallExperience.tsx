@@ -12,6 +12,7 @@ import {
   catalogItems,
   navItems,
 } from "@/lib/catalog";
+import { contractorProgram } from "@/lib/contractorProgram";
 
 interface ExperienceProps {
   children: React.ReactNode;
@@ -19,6 +20,7 @@ interface ExperienceProps {
 
 export function SiteShell({ children }: ExperienceProps) {
   const [estimateOpen, setEstimateOpen] = useState(false);
+  const [contractorOpen, setContractorOpen] = useState(false);
 
   useEffect(() => {
     const openFromHash = () => {
@@ -58,7 +60,7 @@ export function SiteShell({ children }: ExperienceProps) {
               <button
                 key={item.label}
                 type="button"
-                className="nav-link"
+                className="nav-link nav-link--estimate"
                 onClick={() => setEstimateOpen(true)}
               >
                 {item.label}
@@ -70,15 +72,27 @@ export function SiteShell({ children }: ExperienceProps) {
             ),
           )}
         </nav>
-        <button className="stone-button stone-button--small" onClick={() => setEstimateOpen(true)}>
-          Start Estimate
+        <button className="stone-button stone-button--small header-estimate-button" onClick={() => setEstimateOpen(true)}>
+          <span className="header-estimate-button__full">Start Estimate</span>
+          <span className="header-estimate-button__short">Estimate</span>
         </button>
       </header>
       {children}
       <Footer onEstimate={() => setEstimateOpen(true)} />
+      <button
+        type="button"
+        className="contractor-fab"
+        onClick={() => setContractorOpen(true)}
+      >
+        Contractors
+      </button>
       <EstimateModal
         isOpen={estimateOpen}
         onClose={() => setEstimateOpen(false)}
+      />
+      <ContractorModal
+        isOpen={contractorOpen}
+        onClose={() => setContractorOpen(false)}
       />
     </>
   );
@@ -437,6 +451,141 @@ export function EstimateModal({
             {status === "sending" ? "Sending..." : "Request Quote"}
           </button>
           {status === "sent" && <p className="form-note">Request sent. We will follow up with quote details.</p>}
+          {status === "fallback" && <p className="form-note">EmailJS is not configured yet, so an email draft was opened.</p>}
+        </section>
+      </form>
+    </div>,
+    document.body,
+  );
+}
+
+export function ContractorModal({
+  isOpen,
+  onClose,
+}: {
+  isOpen: boolean;
+  onClose: () => void;
+}) {
+  const [shouldRender, setShouldRender] = useState(isOpen);
+  const [status, setStatus] = useState<"idle" | "sending" | "sent" | "fallback">("idle");
+
+  useEffect(() => {
+    if (isOpen) {
+      // This local render flag preserves the stone-panel exit animation.
+      // eslint-disable-next-line react-hooks/set-state-in-effect
+      setShouldRender(true);
+      setStatus("idle");
+      return;
+    }
+    const timeout = window.setTimeout(() => setShouldRender(false), 520);
+    return () => window.clearTimeout(timeout);
+  }, [isOpen]);
+
+  useEffect(() => {
+    if (!shouldRender) return;
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    return () => {
+      document.body.style.overflow = previousOverflow;
+    };
+  }, [shouldRender]);
+
+  if (!shouldRender || typeof document === "undefined") return null;
+
+  const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    const form = event.currentTarget;
+    const serviceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID;
+    const templateId = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID;
+    const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY;
+
+    if (!serviceId || !templateId || !publicKey) {
+      setStatus("fallback");
+      const formData = new FormData(form);
+      const body = Array.from(formData.entries())
+        .map(([key, value]) => `${key}: ${value}`)
+        .join("\n");
+      window.location.href = `mailto:hello@greatwalloflegends.com?subject=${encodeURIComponent(
+        "Great Wall contractor network signup",
+      )}&body=${encodeURIComponent(body)}`;
+      return;
+    }
+
+    setStatus("sending");
+    try {
+      await emailjs.sendForm(serviceId, templateId, form, { publicKey });
+      form.reset();
+      setStatus("sent");
+    } catch {
+      setStatus("fallback");
+    }
+  };
+
+  return createPortal(
+    <div className="modal-stage" role="dialog" aria-modal="true" aria-label="Contractor network signup">
+      <button className={`modal-scrim ${isOpen ? "is-open" : "is-closing"}`} onClick={onClose} aria-label="Close contractor form" />
+      <form className="modal-book contractor-book" onSubmit={handleSubmit}>
+        <section className={`modal-slab contractor-summary ${isOpen ? "stone-left-in" : "stone-left-out"}`}>
+          <div className="monogram-watermark">
+            <Image src="/great-wall/brand/monogram.png" alt="" fill sizes="220px" />
+          </div>
+          <p className="fine-label">{contractorProgram.eyebrow}</p>
+          <h2>{contractorProgram.heading}</h2>
+          <p>{contractorProgram.summary}</p>
+          <div className="contractor-benefits">
+            {contractorProgram.benefits.map((benefit) => (
+              <span key={benefit}>✓ {benefit}</span>
+            ))}
+          </div>
+          <div className="contractor-awards" aria-label="Contractor award categories">
+            {contractorProgram.awards.map((award) => (
+              <strong key={award}>{award}</strong>
+            ))}
+          </div>
+        </section>
+        <section className={`modal-slab estimate-form contractor-form ${isOpen ? "stone-right-in" : "stone-right-out"}`}>
+          <div className="modal-head">
+            <div>
+              <p className="fine-label">Partner intake</p>
+              <h2>Get considered.</h2>
+            </div>
+            <button type="button" className="close-button" onClick={onClose} aria-label="Close contractor form">
+              x
+            </button>
+          </div>
+          <p className="modal-description">{contractorProgram.closing}</p>
+          <input type="hidden" name="signup_type" value="Contractor network" />
+          <div className="form-grid">
+            <label>
+              Name
+              <input name="name" required autoComplete="name" placeholder="Your name" />
+            </label>
+            <label>
+              Phone
+              <input name="phone" required autoComplete="tel" placeholder="Best number" />
+            </label>
+            <label>
+              Email
+              <input name="email" type="email" required autoComplete="email" placeholder="you@example.com" />
+            </label>
+            <label>
+              City, State
+              <input name="city_state" required autoComplete="address-level2" placeholder="Newark, NJ" />
+            </label>
+          </div>
+          <label className="message-field">
+            Operating region
+            <textarea
+              name="operating_region"
+              rows={4}
+              required
+              placeholder="Tell us the counties, towns, or radius you usually cover."
+            />
+          </label>
+          <button className="stone-button" type="submit" disabled={status === "sending"}>
+            {status === "sending" ? "Sending..." : "Apply to Join"}
+          </button>
+          {status === "sent" && <p className="form-note">Thanks. We&apos;ll review your region and reach out if there is a fit.</p>}
           {status === "fallback" && <p className="form-note">EmailJS is not configured yet, so an email draft was opened.</p>}
         </section>
       </form>

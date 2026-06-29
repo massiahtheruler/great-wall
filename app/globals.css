@@ -96,7 +96,7 @@ button {
   top: 0;
   z-index: 40;
   display: grid;
-  grid-template-columns: auto 1fr auto;
+  grid-template-columns: minmax(0, auto) minmax(0, 1fr) auto;
   align-items: center;
   gap: 1rem;
   width: min(1180px, calc(100% - 32px));
@@ -119,6 +119,8 @@ button {
 }
 
 .brand-lockup {
+  grid-column: 1;
+  grid-row: 1;
   display: inline-flex;
   align-items: center;
   gap: 0.75rem;
@@ -170,10 +172,18 @@ button {
 }
 
 .desktop-nav {
+  grid-column: 2;
+  grid-row: 1;
   display: flex;
   min-width: 0;
   justify-content: center;
   gap: 0.45rem;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.desktop-nav::-webkit-scrollbar {
+  display: none;
 }
 
 .nav-link {
@@ -309,6 +319,17 @@ button {
   min-height: 2.55rem;
   padding: 0.62rem 0.9rem;
   font-size: 0.88rem;
+}
+
+.site-header > .stone-button--small {
+  grid-column: 3;
+  grid-row: 1;
+  justify-self: end;
+  white-space: nowrap;
+}
+
+.header-estimate-button__short {
+  display: none;
 }
 
 .ghost-button {
@@ -910,6 +931,11 @@ h3 {
   padding: clamp(1rem, 2.4vw, 1.5rem);
 }
 
+.builder-preview-cta {
+  width: 100%;
+  margin-top: 1rem;
+}
+
 .builder-preview-panel__heading {
   display: flex;
   align-items: flex-start;
@@ -1071,8 +1097,26 @@ h3 {
 }
 
 .builder-control-group,
-.builder-total-card {
+.builder-total-card,
+.builder-trust-panel,
+.builder-installations,
+.builder-quote-form {
   padding: clamp(1rem, 2.4vw, 1.35rem);
+}
+
+.builder-trust-panel,
+.builder-installations,
+.builder-quote-form {
+  border: 1px solid rgba(58, 58, 58, 0.2);
+  border-radius: 8px;
+  background:
+    linear-gradient(
+      145deg,
+      rgba(230, 226, 216, 0.94),
+      rgba(188, 181, 168, 0.9)
+    ),
+    linear-gradient(90deg, rgba(217, 122, 43, 0.08), transparent);
+  box-shadow: var(--shadow-close);
 }
 
 .builder-control-group__heading {
@@ -1168,12 +1212,51 @@ h3 {
   gap: 0.68rem;
 }
 
-.builder-total-card div {
+.builder-total-card p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.92rem;
+  line-height: 1.55;
+}
+
+.builder-total-card__intro {
+  display: grid !important;
+  gap: 0.2rem !important;
+  border-bottom: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+.builder-total-card__intro span {
+  color: var(--ink) !important;
+  font-size: 0.88rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.builder-total-card__intro strong {
+  color: var(--copper-deep) !important;
+  font-size: clamp(2rem, 4vw, 3.1rem);
+  line-height: 0.95;
+}
+
+.builder-price-lines {
+  display: grid;
+  gap: 0.52rem;
+  border-top: 1px solid rgba(58, 58, 58, 0.14);
+  padding-top: 0.7rem;
+}
+
+.builder-total-card > div:not(.builder-price-lines),
+.builder-price-line {
   display: flex;
   justify-content: space-between;
   gap: 1rem;
   border-bottom: 1px solid rgba(58, 58, 58, 0.14);
   padding-bottom: 0.62rem;
+}
+
+.builder-price-line--total {
+  display: none;
 }
 
 .builder-total-card span {
@@ -1198,6 +1281,121 @@ h3 {
 .builder-total-card__final strong {
   color: var(--copper-deep);
   font-size: 1.55rem;
+}
+
+.builder-urgency {
+  font-weight: 800;
+}
+
+.builder-trust-panel {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.65rem;
+}
+
+.builder-trust-panel span {
+  border: 1px solid rgba(58, 58, 58, 0.16);
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.34);
+  padding: 0.7rem 0.78rem;
+  color: #2d241c;
+  font-size: 0.92rem;
+  font-weight: 850;
+}
+
+.builder-installation-card {
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid rgba(58, 58, 58, 0.18);
+  border-radius: 7px;
+  background: rgba(255, 255, 255, 0.28);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.34);
+}
+
+.builder-installation-card img {
+  width: 100%;
+  aspect-ratio: 16 / 11;
+  object-fit: cover;
+}
+
+.builder-installation-card figcaption {
+  display: grid;
+  gap: 0.28rem;
+  padding: 0.62rem;
+  color: var(--ink);
+  line-height: 1.25;
+}
+
+.builder-installation-card figcaption strong {
+  color: #2d241c;
+  font-family: var(--font-serif), Georgia, serif;
+  font-size: 1.45rem;
+  line-height: 1;
+}
+
+.builder-installation-card figcaption span {
+  color: var(--muted);
+  font-size: 0.92rem;
+  line-height: 1.45;
+}
+
+.builder-quote-form {
+  display: grid;
+  gap: 1rem;
+  scroll-margin-top: 7rem;
+}
+
+.builder-form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.75rem;
+}
+
+.builder-form-grid label,
+.builder-consultation-check {
+  display: grid;
+  gap: 0.4rem;
+  color: #2d241c;
+  font-weight: 850;
+}
+
+.builder-form-grid label:nth-child(4) {
+  grid-column: 1 / -1;
+}
+
+.builder-form-grid input {
+  min-width: 0;
+  border: 1px solid rgba(58, 58, 58, 0.24);
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.5);
+  padding: 0.78rem 0.84rem;
+  color: var(--ink);
+  outline: none;
+}
+
+.builder-form-grid input:focus-visible {
+  border-color: rgba(217, 122, 43, 0.56);
+  box-shadow: 0 0 0 3px rgba(217, 122, 43, 0.18);
+}
+
+.builder-consultation-check {
+  grid-template-columns: auto minmax(0, 1fr);
+  align-items: center;
+  border: 1px solid rgba(58, 58, 58, 0.16);
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.28);
+  padding: 0.78rem;
+}
+
+.builder-consultation-check input {
+  width: 1.1rem;
+  height: 1.1rem;
+  margin: 0;
+  accent-color: var(--copper);
+}
+
+.builder-consultation-check span {
+  line-height: 1.35;
 }
 
 .modal-stage {
@@ -1445,6 +1643,109 @@ textarea {
   margin: 0.75rem 0 0;
   color: var(--copper-deep);
   font-weight: 800;
+}
+
+.contractor-fab {
+  position: fixed;
+  right: max(1rem, calc((100vw - 1180px) / 2));
+  bottom: 1.1rem;
+  z-index: 45;
+  border: 1px solid rgba(78, 42, 18, 0.5);
+  border-radius: 999px;
+  background:
+    linear-gradient(180deg, #2d261e, #17120e),
+    linear-gradient(90deg, rgba(217, 122, 43, 0.22), transparent);
+  color: var(--limestone);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.14),
+    0 14px 28px rgba(18, 13, 9, 0.34),
+    0 0 18px rgba(217, 122, 43, 0.24);
+  padding: 0.76rem 1rem;
+  font-size: 0.9rem;
+  font-weight: 900;
+  letter-spacing: 0;
+  transition:
+    transform 180ms ease,
+    box-shadow 180ms ease,
+    border-color 180ms ease;
+}
+
+.contractor-fab:hover,
+.contractor-fab:focus-visible {
+  border-color: rgba(217, 122, 43, 0.5);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.18),
+    0 18px 34px rgba(18, 13, 9, 0.42),
+    var(--flame-glow);
+  transform: translateY(-1px);
+  outline: none;
+}
+
+.contractor-fab:active {
+  transform: translateY(1px) scale(0.985);
+}
+
+.contractor-book {
+  width: min(1120px, 100%);
+}
+
+.contractor-summary {
+  display: grid;
+  align-content: start;
+  gap: 1rem;
+  border-radius: 8px 0 0 8px;
+}
+
+.contractor-summary h2 {
+  max-width: 10ch;
+  font-size: clamp(2.5rem, 5vw, 4.75rem);
+  line-height: 0.9;
+}
+
+.contractor-summary p {
+  margin: 0;
+  max-width: 34rem;
+  color: var(--muted);
+  line-height: 1.65;
+}
+
+.contractor-benefits {
+  display: grid;
+  gap: 0.58rem;
+}
+
+.contractor-benefits span {
+  border: 1px solid rgba(58, 58, 58, 0.18);
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.3);
+  padding: 0.72rem 0.8rem;
+  color: #2d241c;
+  font-weight: 850;
+  line-height: 1.3;
+}
+
+.contractor-awards {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.62rem;
+}
+
+.contractor-awards strong {
+  border: 1px solid rgba(217, 122, 43, 0.26);
+  border-radius: 6px;
+  background:
+    linear-gradient(180deg, rgba(217, 122, 43, 0.16), rgba(255, 255, 255, 0.22)),
+    rgba(255, 255, 255, 0.18);
+  padding: 0.82rem;
+  color: var(--copper-deep);
+  font-size: 0.9rem;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.contractor-form {
+  display: grid;
+  align-content: start;
 }
 
 .site-footer {
@@ -1698,19 +1999,20 @@ textarea {
 @media (max-width: 980px) {
   .site-header {
     grid-template-columns: 1fr auto;
-    align-items: stretch;
+    align-items: center;
+    gap: 0.65rem;
   }
 
   .desktop-nav {
     grid-column: 1 / -1;
+    grid-row: 2;
     justify-content: flex-start;
-    overflow-x: auto;
     padding-bottom: 0.1rem;
-    scrollbar-width: none;
   }
 
-  .desktop-nav::-webkit-scrollbar {
-    display: none;
+  .site-header > .stone-button--small {
+    grid-column: 2;
+    grid-row: 1;
   }
 
   .nav-link {
@@ -1756,7 +2058,8 @@ textarea {
   .modal-slab--image,
   .modal-slab--copy,
   .estimate-summary,
-  .estimate-form {
+  .estimate-form,
+  .contractor-summary {
     min-height: auto;
     border-radius: 8px;
   }
@@ -1768,21 +2071,59 @@ textarea {
 
 @media (max-width: 640px) {
   .site-header {
-    grid-template-columns: minmax(0, 1fr);
+    grid-template-columns: minmax(0, 1fr) auto;
     width: calc(100% - 18px);
     margin-top: 9px;
+    gap: 0.55rem;
+    padding: 0.55rem;
   }
 
   .brand-lockup {
-    justify-self: center;
+    justify-self: start;
+    gap: 0.55rem;
   }
 
   .brand-lockup strong {
-    font-size: 1.08rem;
+    font-size: 1rem;
+  }
+
+  .brand-lockup small {
+    font-size: 0.66rem;
+  }
+
+  .brand-mark {
+    width: 2.4rem;
+    height: 2.4rem;
   }
 
   .stone-button--small {
+    min-height: 2.4rem;
+    padding: 0.58rem 0.72rem;
+    font-size: 0.78rem;
+  }
+
+  .nav-link--estimate,
+  .header-estimate-button__full {
     display: none;
+  }
+
+  .header-estimate-button__short {
+    display: inline;
+  }
+
+  .desktop-nav {
+    width: 100%;
+    gap: 0.38rem;
+    justify-content: space-between;
+    overflow: visible;
+  }
+
+  .nav-link {
+    flex: 1 1 0;
+    min-width: 0;
+    padding: 0.62rem 0.5rem;
+    font-size: clamp(0.76rem, 2.9vw, 0.88rem);
+    text-align: center;
   }
 
   .hero,
@@ -1822,12 +2163,16 @@ textarea {
   .option-grid--large,
   .included-grid,
   .form-grid,
-  .builder-option-row {
+  .builder-option-row,
+  .builder-form-grid,
+  .builder-trust-panel,
+  .contractor-awards {
     grid-template-columns: 1fr;
   }
 
   .builder-preview-panel__heading,
-  .builder-total-card div {
+  .builder-total-card > div:not(.builder-price-lines),
+  .builder-price-line {
     display: grid;
   }
 
@@ -1843,6 +2188,17 @@ textarea {
   .site-footer .stone-button {
     width: 100%;
     justify-content: center;
+  }
+
+  .contractor-fab {
+    right: 0.8rem;
+    bottom: 0.8rem;
+    padding: 0.68rem 0.85rem;
+    font-size: 0.82rem;
+  }
+
+  .contractor-summary h2 {
+    max-width: 11ch;
   }
 }
 

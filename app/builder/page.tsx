@@ -8,9 +8,9 @@ export default function BuilderPage() {
         <p className="fine-label">Model estimator</p>
         <h1>Build a media wall estimate from simple choices.</h1>
         <p>
-          This starter page shows the moving parts: a selected base model,
-          optional features, a blueprint-style SVG preview, and a running
-          subtotal that updates from the same state.
+          Design your custom media wall. Select your preferred model,
+          customize it with available upgrades, and receive an estimated
+          project cost before requesting your exact quote.
         </p>
       </RevealSection>
 
